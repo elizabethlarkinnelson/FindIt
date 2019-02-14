@@ -1,3 +1,9 @@
 from django.db import models
 
-# Create your models here.
+class Job(models.Model):
+    job_title = models.CharField(max_length=50)
+    company = models.IntegerField()
+
+class Company(models.Model):
+    company_name = models.CharField(max_length=50)
+    company_logo = models.ImageField()
