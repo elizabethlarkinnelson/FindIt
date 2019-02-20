@@ -1,9 +1,15 @@
 from django.db import models
 
-class Job(models.Model):
-    job_title = models.CharField(max_length=50)
-    company = models.IntegerField()
-
 class Company(models.Model):
-    company_name = models.CharField(max_length=50)
-    company_logo = models.ImageField()
+    name = models.CharField(max_length=50)
+    location = models.CharField(max_length=50)
+
+class Job(models.Model):
+    title = models.CharField(max_length=50)
+    company = models.ForeignKey(Company, on_delete=models.CASCADE)
+    description = models.CharField(max_length=50)
+    link = models.CharField(max_length=50)
+
+
+
+    
