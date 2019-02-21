@@ -100,11 +100,6 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-#Fixture
-
-FIXTURE_DIRS = (
-    '/fixtures/jobs/',
-)
 
 
 # Internationalization
