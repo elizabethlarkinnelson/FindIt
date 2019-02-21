@@ -4,6 +4,6 @@ from django.http import HttpResponse
 from .models import Job
 
 
-def index(request):
+def all_jobs(request):
     all_jobs = Job.objects.all()
     return HttpResponse(all_jobs)
