@@ -12,13 +12,13 @@ class Job(models.Model):
     description = models.CharField(max_length=1000)
     link = models.CharField(max_length=200)
 
-class Requirements(models.Model):
+class Requirement(models.Model):
     job = models.ForeignKey(Job, on_delete=models.CASCADE)
     description = models.CharField(max_length=100)
 
 class Experience(models.Model):
     job = models.ForeignKey(Job, on_delete=models.CASCADE)
-    decription = models.CharField(max_length=100)
+    description = models.CharField(max_length=100)
 
 class Compensation(models.Model):
     job = models.ForeignKey(Job, on_delete=models.CASCADE)
