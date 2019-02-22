@@ -6,3 +6,12 @@
 #jumbotron-overrides {
     background-color: #D1603D;
 }
+
+#body-overrides {
+    background-color: #DCDCDC;
+}
+
+.row.job {
+    background: #ffffff;
+    font: 'Lobster';
+}
