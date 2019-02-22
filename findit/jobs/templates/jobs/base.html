@@ -1,0 +1,19 @@
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'jobs/style.css' %}">
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+        
+    <p>This is my head portion</p>
+</head>
+<body>
+    {% block index %}
+    {% endblock %}
+    {% block job_detail %}
+    {% endblock %}
+
+</body>
+
+</html>
