@@ -3,12 +3,18 @@
 
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-        
-    <p>This is my head portion</p>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">    
 </head>
 <body>
+    <div class="container" id="title">
+        <div class="jumbotron" id=jumbotron-overrides>
+            <h1> Find It</h1>
+            <p>The website that finds the right job for you.</p>
+        </div>
+    </div>
     {% block index %}
     {% endblock %}
     {% block job_detail %}

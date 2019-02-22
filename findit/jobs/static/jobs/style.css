@@ -1,3 +1,8 @@
-li a {
-    color:red 
+#title {
+    font: 'Lobster';
+    color:  #ffffff;
+}
+
+#jumbotron-overrides {
+    background-color: #D1603D;
 }
