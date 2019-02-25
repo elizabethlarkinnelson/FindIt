@@ -4,17 +4,19 @@
 {% block index %}
 
 {% if all_jobs %}
-    <div class="container">
-        {% for job in all_jobs %}
-            <div class="row job">
-                <div class="col-6 col-sm-3">{{job.company.name}}</div>
-                <div class="col-6 col-sm-3"> THIS JOB IS IN</div>
-            </div>
-            <div class="row job">
-                    <div class="col-6 col-sm-3"><a href="{% url 'jobs:job_detail' job.id %}">{{job.title}}</a></div>
-                    <div class="col-6 col-sm-3"> {{job.company.city}} , {{job.company.state}}</div>
-            </div>
-        {% endfor %}
+    <div class="container jobs">
+        <div class="row border-top"></div>
+            {% for job in all_jobs %}
+                <div class="row job" id="job-name-in">
+                    <div class="col-sm-6" id="job-name">{{job.company.name}}</div>
+                    <div class="col-sm-6" id="job-in"> THIS JOB IS IN</div>
+                </div>
+                <div class="row job" id="job-title-loc">
+                        <div class="col-sm-6" id="job-title"><a href="{% url 'jobs:job_detail' job.id %}">{{job.title}}</a></div>
+                        <div class="col-sm-6" id="job-loc"> {{job.company.city}} , {{job.company.state}}</div>
+                </div>
+            {% endfor %}
+        <div class="row border-bottom"></div>
     </div>
 {% else %}
     <p>No jobs available</p>

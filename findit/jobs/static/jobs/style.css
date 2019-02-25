@@ -13,11 +13,53 @@
 
 .row.job {
     background: #ffffff;
-    font: 'Lobster';
+    font-family: 'Georgia';
 }
 
 #findit {
     font: 'Lobster';
     font-size: 4em;
     color:  #ffffff;
+}
+
+.container.jobs {
+    max-width: 50%;
+}
+
+.row.border-top {
+    height: 0.5em;
+    background-color: #ffffff;
+    border-top-left-radius: 40rem;
+    border-top-right-radius: 40rem;
+}
+
+.row.border-bottom{
+    height: 0.5em;
+    background-color: #ffffff;
+    border-bottom-left-radius: 40rem;
+    border-bottom-right-radius: 40rem;
+}
+
+#job-name {
+    font-size: 1.3em;
+    font-weight: bold;
+}
+
+#job-in {
+    font-style: italic;
+    font-weight: bold;
+    color: #808080;
+}
+
+#job-name-in {
+    padding-bottom: 0.8em;
+
+}
+
+#job-title-loc {
+    padding-bottom: 1em;
+}
+
+#job-loc {
+    color: #808080;
 }
