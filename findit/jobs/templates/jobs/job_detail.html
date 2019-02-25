@@ -2,8 +2,35 @@
 {% load static %}
 
 {% block index %}
-<li>{{job_title}}</li>
-<li>{{company_name}}</li>
 
-<img src= "{% static "" %}{{logo_path}}" alt="">
+<div class="container jobs">
+        <div class="row border-top"></div>
+        <div class="row">
+            {{job.title}} {{company.name}}
+        </div>
+        <img src= "{% static "" %}{{logo_path}}" alt="" width="100px" height="50px">
+        <div class="row">
+            {{company.city}} {{company.state}}
+        </div>
+        <div class="row">
+            {{company.about}}
+        </div>
+        <div class="row">
+            {{job.description}} {{job.link}}
+        </div>
+            {% for requirement in requirements %}
+                <div class="row">
+                    <div class="col-sm-6">{{requirement.description}}</div>
+                </div>
+            {% endfor %}
+            {% for experience in experiences %}
+                <div class="row">
+                    <div class="col-sm-6">{{experience.description}}</div>
+                </div>
+            {% endfor %}
+        <div class="row">
+            {{compensation.description}}
+        </div>
+        <div class="row border-bottom"></div>
+    </div>
 {% endblock %}

@@ -1,7 +1,7 @@
 from django.shortcuts import render, get_object_or_404
 
 
-from .models import Job, Company
+from .models import Job, Company, Requirement, Experience, Compensation
 
 
 def all_jobs(request):
@@ -14,10 +14,17 @@ def all_jobs(request):
 
 def job_detail(request, job_id):
     job = get_object_or_404(Job, pk=job_id)
-    company = job.company.name
+    company = job.company
+    requirements = Requirement.objects.filter(job=job)
+    experiences = Experience.objects.filter(job=job)
+    compensation = Compensation.objects.filter(job=job)
+
     context = {
-        'job_title': job.title,
-        'company_name': company,
-        'logo_path': 'jobs/'+ company + '.jpg'
+        'job': job,
+        'company': company,
+        'requirements': requirements,
+        'experiences': experiences,
+        'compensation': compensation,
+        'logo_path': 'jobs/'+ company.name + '.jpg'
     }
     return render(request, 'jobs/job_detail.html', context)
