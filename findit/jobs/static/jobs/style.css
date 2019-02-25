@@ -100,4 +100,13 @@
     padding-bottom: 0.9em;
 }
 
+#job-requirements {
+    font-weight: bold;
+}
+
+#job-experience {
+    font-weight: bold;
+    padding-top: 0.8em;
+}
+
 
