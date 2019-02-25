@@ -1,5 +1,9 @@
 {% extends "./base.html" %}
+{% load static %}
 
 {% block index %}
 <li>{{job_title}}</li>
+<li>{{company_name}}</li>
+
+<img src= "{% static "" %}{{logo_path}}" alt="">
 {% endblock %}
