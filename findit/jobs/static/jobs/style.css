@@ -16,6 +16,20 @@
     font-family: 'Georgia';
 }
 
+.row.job-detail {
+    background: #ffffff;
+    font-family: 'Georgia';
+}
+
+#job-detail-title {
+    font-weight: bold;
+    font-size: 1.3em;
+}
+
+#logo {
+    padding-bottom: 0.5em;
+}
+
 #findit {
     font: 'Lobster';
     font-size: 4em;
@@ -63,3 +77,27 @@
 #job-loc {
     color: #808080;
 }
+
+#job-detail-name {
+    font-style: italic;
+    padding-bottom: 0.9em;
+    color: #808080;
+}
+
+#about{
+    font-weight: bold;
+}
+
+#about-description {
+    padding-bottom: 0.8em;
+}
+
+#job-description-title{
+    font-weight: bold;
+}
+
+#job-description {
+    padding-bottom: 0.9em;
+}
+
+

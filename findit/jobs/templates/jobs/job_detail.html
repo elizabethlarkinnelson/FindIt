@@ -4,33 +4,47 @@
 {% block index %}
 
 <div class="container jobs">
-        <div class="row border-top"></div>
-        <div class="row">
-            {{job.title}} {{company.name}}
+    <div class="row border-top"></div>
+    <div class="row job-detail">
+        <div class="col-sm-6" id="job-detail-title">{{job.title}}</div>
+        <div class="col-sm-6" id="logo">
+            <img src= "{% static "" %}{{logo_path}}" alt="" width="50em" height="30em">
         </div>
-        <img src= "{% static "" %}{{logo_path}}" alt="" width="100px" height="50px">
-        <div class="row">
-            {{company.city}} {{company.state}}
-        </div>
-        <div class="row">
-            {{company.about}}
-        </div>
-        <div class="row">
-            {{job.description}} {{job.link}}
-        </div>
-            {% for requirement in requirements %}
-                <div class="row">
-                    <div class="col-sm-6">{{requirement.description}}</div>
-                </div>
-            {% endfor %}
-            {% for experience in experiences %}
-                <div class="row">
-                    <div class="col-sm-6">{{experience.description}}</div>
-                </div>
-            {% endfor %}
-        <div class="row">
-            {{compensation.description}}
-        </div>
-        <div class="row border-bottom"></div>
     </div>
+    <div class="row job-detail">
+        <div class="col-sm-6" id="job-detail-name">{{company.name}}</div>
+        <div class="col-sm-6">{{company.city}}, {{company.state}}</div>
+    </div>
+    <div class="row job-detail">
+        <div class="col-sm-6" id="about"> ABOUT: </div>
+    </div>
+    <div class="row job-detail">
+        <div class="col-sm-6" id="about-description"> {{company.about}}</div>
+    </div>
+    <div class="row job-detail">
+        <div class="col-sm-6" id="job-description-title"> DESCRIPTION: </div>
+    </div>
+    <div class="row job-detail">
+        <div class="col-sm-6" id="job-description"> {{job.description}}</div>
+    </div>
+    <div class="row job-detail">
+            <div class="col-sm-6" id="job-description"> 
+                    <a href="{{job.link}}"> {{job.link}} </a>
+            </div>
+    </div>
+        {% for requirement in requirements %}
+            <div class="row job-detail">
+                <div class="col-sm-6">{{requirement.description}}</div>
+            </div>
+        {% endfor %}
+        {% for experience in experiences %}
+            <div class="row job-detail">
+                <div class="col-sm-6">{{experience.description}}</div>
+            </div>
+        {% endfor %}
+    <div class="row job-detail">
+        {{compensation.description}}
+    </div>
+    <div class="row border-bottom"></div>
+</div>
 {% endblock %}
