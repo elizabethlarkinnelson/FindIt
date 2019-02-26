@@ -53,12 +53,12 @@
     </div>
     {% for comp in compensation %}
         <div class="row job-detail">
-            <div class="col-sm-12">{{comp.description}}</div>
+            <div class="col-sm-12" id="comp-des">{{comp.description}}</div>
         </div>
     {% endfor %}
     <div class= "row job-detail">
-        <div class="col-sm-5 col-sm-offset-2">
-            <iframe width="500" height="400" src="{{company.embed_link}}" frameborder="0" 
+        <div class="col-sm-12">
+            <iframe align="middle" width="500" height="400" src="{{company.embed_link}}" frameborder="0" 
             allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
     </div>

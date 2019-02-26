@@ -8,6 +8,7 @@ class Company(models.Model):
     about = models.CharField(max_length=1000, default=None, blank=True)
     embed_link = models.CharField(max_length=300, null=True, default=None, blank=True)
 
+
 class Job(models.Model):
     title = models.CharField(max_length=50)
     company = models.ForeignKey(Company, on_delete=models.CASCADE, blank=True, null=True, default=None)
