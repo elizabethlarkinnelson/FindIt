@@ -6,8 +6,7 @@ class Company(models.Model):
     city = models.CharField(max_length=50, default=None, blank=True)
     state = models.CharField(max_length=2, default=None, blank=True)
     about = models.CharField(max_length=1000, default=None, blank=True)
-    embed_content_link = models.CharField(max_length=300, default=None, blank=True)
-
+    embed_link = models.CharField(max_length=300, null=True, default=None, blank=True)
 
 class Job(models.Model):
     title = models.CharField(max_length=50)
